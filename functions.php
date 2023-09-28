@@ -107,3 +107,9 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+function add_google_font() {
+    wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap', array(), null);
+}
+
+add_action('wp_enqueue_scripts', 'add_google_font');
